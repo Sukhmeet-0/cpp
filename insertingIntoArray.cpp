@@ -54,6 +54,15 @@ public:
         cin >> y;
         a[y] = x;
     }
+    void del(){
+        int x;
+        int y;
+        cout<<"Enter the index number to delete that element -> ";cin>>x;
+        y=a[x];
+        a[x]=0;
+        cout<<"!! Deleted element -> "<<y<<endl;
+
+    }
     void display()
     {
         for (int i = 0; i < n; i++)
@@ -69,7 +78,7 @@ int main()
     Insertion i;
     do
     {
-        cout << "Enter the option which you want to choose?\n1.Check space\n2.Insert element\n3.Display\n4.Clear Screen" << endl;
+        cout << "Enter the option which you want to choose?\n1.Check space\n2.Insert element\n3.Delete element\n4.Display\n5.Clear Screen" << endl;
         cin >> j;
         cout << endl;
         switch (j)
@@ -84,12 +93,16 @@ int main()
             i.ins();
             break;
         }
-        case 3:
+        case 3:{
+            i.del();
+            break;
+        }
+        case 4:
         {
             i.display();
             break;
         }
-        case 4:
+        case 5:
         {
             system("cls");
             break;
