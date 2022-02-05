@@ -6,16 +6,26 @@ int main(){
     // char f[10];
     // cout<<"Enter a file name: ";
     // cin>>f;
-    //ofstream out(f);
+    // ofstream out(f);
     // ofstream out;
     // out.open("FileInputOutput.txt");
     // string s="hi i am sukhmeet singh";
     // string m="hi i am harmeet singh";
     // out<<s<<endl<<m;
     // out.close();
-    string fj="hiiiiiiiiiiiiii";
-    ofstream outa;
-    outa.open("FileInputOutput.txt");
-    outa<<fj;
-    outa.close();
+    // string fj="hiiiiiiiiiiiiii";
+    // ofstream outa;
+    // outa.open("FileInputOutput.txt");
+    // outa<<fj;
+    // outa.close();
+    ifstream in;
+    in.open("FileInputOutput.txt");
+    string fr;
+    while(!in.eof()){
+    getline(in,fr);
+        
+    cout<<fr<<endl;
+    }
+    // getline(in,fr);
+    in.close();
 }
